@@ -456,6 +456,21 @@ box-shadow: 0 0 25px rgba(56,189,248,0.4);
 .profile-wrapper img:hover{
   transform:scale(1.03);
 }
+.project-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.project-content{
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+}
+
+.project-content .btn{
+    margin-top:auto;
+    width:fit-content;
+}
 
 .modal-content{
 
