@@ -120,6 +120,37 @@ const projects = {
   },
 
  
+  excel_python_bootcamp: {
+    title: "Excel and Python Bootcamp Project",
+
+    description:
+      "This project is a comprehensive data analysis and visualization project that combines the power of Excel and Python to analyze an Amazon dataset. The project involves cleaning, transforming, and visualizing the data to uncover insights into sales performance, customer behavior, and product trends. Using Excel's advanced features such as Pivot Tables, Charts, and Slicers, along with Python libraries like Pandas, NumPy, and Matplotlib, the project provides a holistic view of the dataset. The interactive dashboards created in both Excel and Python allow users to explore the data dynamically, making it easier to identify patterns and make informed decisions. This project demonstrates my ability to leverage multiple tools for effective data analysis and visualization.",
+
+    github: "https://github.com/HAS0786/Excel_to_Python_Bootcamp",
+
+    tech: ["Excel","Pivot Tables","Slicer", "Python", "Pandas", "NumPy", "Matplotlib", "Data Analysis", "Data Visualization"],
+
+    images: [
+      "images/bootcamp_Excel_to_Python/Maindashboard.png",
+
+      "images/bootcamp_Excel_to_Python/main_excel_dashboard.png",
+
+      "images/bootcamp_Excel_to_Python/Excel Dashboard_showing Charts.png",
+
+      "images/bootcamp_Excel_to_Python/Excel dashboard_with Storytelling.png",
+      "images/bootcamp_Excel_to_Python/loading Dataset_python.png",
+      "images/bootcamp_Excel_to_Python/KPI python.png",
+      "images/bootcamp_Excel_to_Python/data set info.png",
+      "images/bootcamp_Excel_to_Python/dataset overivew.png",
+      "images/bootcamp_Excel_to_Python/customer.. _python.png",
+      "images/bootcamp_Excel_to_Python/Monthly trends_python.png",
+      "images/bootcamp_Excel_to_Python/pie_chart_category_python.png",
+      "images/bootcamp_Excel_to_Python/top_10_sales_python.png",
+      "images/bootcamp_Excel_to_Python/dataset.png",
+      "images/bootcamp_Excel_to_Python/Amazon_Kaggle_dataset.png",
+
+    ],
+  },
   excel1: {
     title: "Sales Performance & Target Achievement Dashboard in Excel",
 
