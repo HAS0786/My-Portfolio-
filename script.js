@@ -93,6 +93,10 @@ counters.forEach((counter) => {
   updateCounter();
 });
 
+let currentImages = [];
+
+let currentIndex = 0;
+
 // MODAL
 
 const projects = {
@@ -119,7 +123,6 @@ const projects = {
     ],
   },
 
- 
   excel_python_bootcamp: {
     title: "Excel and Python Bootcamp Project",
 
@@ -128,7 +131,17 @@ const projects = {
 
     github: "https://github.com/HAS0786/Excel_to_Python_Bootcamp",
 
-    tech: ["Excel","Pivot Tables","Slicer", "Python", "Pandas", "NumPy", "Matplotlib", "Data Analysis", "Data Visualization"],
+    tech: [
+      "Excel",
+      "Pivot Tables",
+      "Slicer",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Data Analysis",
+      "Data Visualization",
+    ],
 
     images: [
       "images/bootcamp_Excel_to_Python/Maindashboard.png",
@@ -148,7 +161,6 @@ const projects = {
       "images/bootcamp_Excel_to_Python/top_10_sales_python.png",
       "images/bootcamp_Excel_to_Python/dataset.png",
       "images/bootcamp_Excel_to_Python/Amazon_Kaggle_dataset.png",
-
     ],
   },
   excel1: {
@@ -157,9 +169,16 @@ const projects = {
     description:
       "Developed an interactive Sales Performance Dashboard in Excel to monitor and analyze sales executives across multiple cities. The dashboard provides insights into top and bottom performers based on total sales and target achievement percentages, helping identify high-performing employees and areas requiring improvement. Using Pivot Tables, Pivot Charts, Slicers, and dynamic reporting techniques, the dashboard enables users to filter data by city and instantly explore sales trends and performance metrics. This project strengthened my skills in Excel dashboard design, data analysis, data visualization, and business reporting.",
 
-    github: "https://github.com/HAS0786/Sales-Performance-Target-Achievement-Dashboard-in-Excel",
+    github:
+      "https://github.com/HAS0786/Sales-Performance-Target-Achievement-Dashboard-in-Excel",
 
-    tech: ["Excel", "Pivot Tables", "Slicers", "Data Visualization", "Dashboard Design"],
+    tech: [
+      "Excel",
+      "Pivot Tables",
+      "Slicers",
+      "Data Visualization",
+      "Dashboard Design",
+    ],
 
     images: [
       "images/Excel Projects/dashboard.png",
@@ -167,7 +186,6 @@ const projects = {
       "images/Excel Projects/analysis1.png",
 
       "images/Excel Projects/analysis.png",
-
     ],
   },
   powerbi1: {
@@ -196,7 +214,8 @@ const projects = {
     description:
       "Developed an HR Analytics and Employee Attrition Dashboard in Power BI to help identify the key factors behind employee turnover and support data-driven HR decisions. The project involved cleaning and transforming HR data, creating custom DAX measures, and building interactive dashboards to analyze attrition across different employee groups. Through insights on overtime, salary levels, work-life balance, age groups, and departments, the dashboard highlights areas where organizations can improve employee retention. This project strengthened my skills in data preparation, business analysis, KPI development, dashboard design, and data storytelling while demonstrating how analytics can be used to solve real business problems.",
 
-    github: "https://github.com/HAS0786/HR-Analytics-Employee-Attrition-Dashboard",
+    github:
+      "https://github.com/HAS0786/HR-Analytics-Employee-Attrition-Dashboard",
 
     tech: ["Power BI", "Data Modeling", "DAX", "Visualization"],
 
@@ -229,8 +248,6 @@ const projects = {
       "images/python projects/project 1/dataset_summary.png",
       "images/python projects/project 1/table_top_countries.png",
       "images/python projects/project 1/table_top_products.png",
-
-   
     ],
   },
   python_Scikit1: {
@@ -239,9 +256,20 @@ const projects = {
     description:
       "Developed a machine learning project to predict student stress levels using Support Vector Machine (SVM) and Decision Tree algorithms. The project involved data preprocessing, feature scaling, model training, and performance evaluation on survey-based student data. Multiple evaluation techniques, including confusion matrices, classification reports, learning curves, and F1-scores, were used to assess model performance beyond simple accuracy metrics. A comparative analysis showed that the SVM model achieved the best overall performance, demonstrating its effectiveness in classifying stress levels into Low, Medium, and High categories. This project strengthened my understanding of supervised machine learning, model evaluation, feature scaling, cross-validation, and classification techniques using Scikit-learn.",
 
-    github: "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+    github:
+      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
 
-    tech: ["Python", "NumPy", "Pandas", "Seaborn", "Scikit-learn", "SVM", "Decision Tree", "Classification Report", "Learning Curves"],
+    tech: [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Seaborn",
+      "Scikit-learn",
+      "SVM",
+      "Decision Tree",
+      "Classification Report",
+      "Learning Curves",
+    ],
 
     images: [
       "images/python projects/project 2/SVM.png",
@@ -284,16 +312,35 @@ openBtns.forEach((button) => {
 
     gallery.innerHTML = "";
 
-    project.images.forEach((img) => {
+    currentImages = project.images;
+
+    project.images.forEach((img, index) => {
       gallery.innerHTML += `
-      <img src="${img}">
-      `;
+        <img src="${img}" data-index="${index}">`;
     });
 
     modal.style.display = "flex";
   });
 });
 
+document.querySelector(".next-btn").onclick = () => {
+  currentIndex++;
+
+  if (currentIndex >= currentImages.length) {
+    currentIndex = 0;
+  }
+
+  viewerImage.src = currentImages[currentIndex];
+};
+document.querySelector(".prev-btn").onclick = () => {
+  currentIndex--;
+
+  if (currentIndex < 0) {
+    currentIndex = currentImages.length - 1;
+  }
+
+  viewerImage.src = currentImages[currentIndex];
+};
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
@@ -303,8 +350,6 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
-
-
 
 // DARK LIGHT TOGGLE
 
@@ -372,114 +417,61 @@ const viewerImage = document.getElementById("viewerImage");
 const closeViewer = document.querySelector(".close-viewer");
 
 if (viewer && viewerImage && closeViewer) {
-
   document.addEventListener("click", (e) => {
-
     if (e.target.matches(".modal-gallery img")) {
-
       viewer.style.display = "flex";
 
       viewerImage.src = e.target.src;
-
     }
-
   });
 
   closeViewer.addEventListener("click", () => {
-
     viewer.style.display = "none";
-
   });
 
   viewer.addEventListener("click", (e) => {
-
     if (e.target === viewer) {
-
       viewer.style.display = "none";
-
     }
-
   });
-
 }
-document.addEventListener("click", (e) => {
-
-  if (e.target.matches(".modal-gallery img")) {
-
-    viewer.style.display = "flex";
-
-    viewerImage.src = e.target.src;
-
-  }
-
-});
-
-closeViewer.addEventListener("click",()=>{
-
-  viewer.style.display = "none";
-
-});
-
-viewer.addEventListener("click",(e)=>{
-
-  if(e.target === viewer){
-
-    viewer.style.display = "none";
-
-  }
-
-});
 
 
 // EMAILJS CONTACT FORM
 
 emailjs.init("CGj7BdzPagyZwhMpr");
 
-const contactForm =
-document.getElementById("contact-form");
+const contactForm = document.getElementById("contact-form");
 
-const statusMessage =
-document.getElementById("form-status");
+const statusMessage = document.getElementById("form-status");
 
-contactForm.addEventListener("submit", function(e){
-
+contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  statusMessage.innerHTML =
-  "Sending message...";
+  statusMessage.innerHTML = "Sending message...";
 
-  emailjs.sendForm(
+  emailjs
+    .sendForm(
+      "service_bpotm8p",
 
-    "service_bpotm8p",
+      "template_rqrklxa",
 
-    "template_rqrklxa",
+      this,
+    )
 
-    this
+    .then(() => {
+      statusMessage.innerHTML = "✅ Message sent successfully!";
 
-  )
+      statusMessage.style.color = "#22c55e";
 
-  .then(() => {
+      contactForm.reset();
+    })
 
-    statusMessage.innerHTML =
-    "✅ Message sent successfully!";
+    .catch((error) => {
+      console.error(error);
 
-    statusMessage.style.color =
-    "#22c55e";
+      statusMessage.innerHTML = "❌ Failed to send message.";
 
-    contactForm.reset();
-
-  })
-
-  .catch((error) => {
-
-    console.error(error);
-
-    statusMessage.innerHTML =
-    "❌ Failed to send message.";
-
-    statusMessage.style.color =
-    "#ef4444";
-
-  });
-
+      statusMessage.style.color = "#ef4444";
+    });
 });
