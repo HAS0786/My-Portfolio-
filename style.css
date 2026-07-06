@@ -356,7 +356,7 @@ opacity:1;
 
     top:50%;
 
-    transform:translateY(-50%);
+    transform:translateY(-55%);
 
     width:55px;
 
@@ -366,9 +366,9 @@ opacity:1;
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.12);
+    background:rgba(75, 74, 74, 0.5);;
 
-    color:white;
+    color:#38bdf8;
 
     font-size:28px;
 
@@ -376,6 +376,9 @@ opacity:1;
 
     transition:.3s;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .viewer-btn:hover{
@@ -386,13 +389,13 @@ opacity:1;
 
 .prev-btn{
 
-    left:35px;
+    left:25px;
 
 }
 
 .next-btn{
 
-    right:35px;
+    right:25px;
 
 }
 
@@ -415,6 +418,22 @@ opacity:1;
 .modal-gallery img{
 
     cursor:pointer;
+
+}
+
+.preview-image{
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.preview-image:hover{
+
+    transform:scale(1.02);
+
+    opacity:.9;
 
 }
 

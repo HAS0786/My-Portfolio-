@@ -72,26 +72,42 @@ typeEffect();
 
 const counters = document.querySelectorAll(".counter");
 
-counters.forEach((counter) => {
+function animateCounter(counter) {
   counter.innerText = "0";
 
-  const updateCounter = () => {
-    const target = +counter.getAttribute("data-target");
-    const current = +counter.innerText.replace("+", "");
+  const target = +counter.dataset.target;
 
-    const increment = target / 100;
+  const increment = Math.max(1, Math.ceil(target / 100));
+
+  function update() {
+    let current = parseInt(counter.innerText) || 0;
 
     if (current < target) {
-      counter.innerText = Math.ceil(current + increment);
+      counter.innerText = Math.min(current + increment, target);
 
-      setTimeout(updateCounter, 35);
+      requestAnimationFrame(update);
     } else {
       counter.innerText = target + "+";
     }
-  };
+  }
 
-  updateCounter();
-});
+  update();
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  },
+);
+
+counters.forEach((counter) => observer.observe(counter));
 
 let currentImages = [];
 
@@ -283,22 +299,15 @@ const projects = {
   },
 
   // Flutter
-   whatsapp_clone: {
+  whatsapp_clone: {
     title: "WhatsApp UI Clone",
 
     description:
       "This project is a WhatsApp UI clone developed using Flutter and Dart. It replicates the user interface of the popular messaging app, providing a seamless and responsive experience across different devices. The project showcases my skills in Flutter development, UI design, and responsive layout implementation. It includes features such as chat screens, contact lists, and navigation between different sections of the app. This project demonstrates my ability to create visually appealing and functional mobile applications using Flutter.",
 
+    github: "https://github.com/HAS0786/WhatsApp_UI_Clone",
 
-    github:
-      "https://github.com/HAS0786/WhatsApp_UI_Clone",
-
-    tech: [
-      "Flutter",
-      "Dart",
-      "UI Design",
-      "Responsive Layout",
-    ],
+    tech: ["Flutter", "Dart", "UI Design", "Responsive Layout"],
 
     images: [
       "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.43.37.jpeg",
@@ -312,15 +321,13 @@ const projects = {
       "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.42.jpeg",
     ],
   },
-   translator_app: {
+  translator_app: {
     title: "Urdu Translator App",
 
     description:
       "This project is a simple Urdu Translator App developed using Flutter and Dart. It allows users to upload files in English and translates them into Urdu using the Google Translation API. The app features a user-friendly interface, responsive layout, and seamless integration with the translation service. This project demonstrates my skills in mobile app development, API integration, and UI design using Flutter.",
 
-
-    github:
-      "https://github.com/HAS0786/my_translator_app",
+    github: "https://github.com/HAS0786/my_translator_app",
 
     tech: [
       "Flutter",
@@ -334,26 +341,17 @@ const projects = {
       "images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.34.jpeg",
       "images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.35 (1).jpeg",
       "images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.35.jpeg",
-
-     
     ],
   },
-   todo: {
+  todo: {
     title: "ToDo App",
 
     description:
       "This project is a simple ToDo apps (2 UI) developed using Flutter and Dart. It allows users to create, update, and delete tasks. The app features a clean and intuitive user interface, responsive layout, and seamless integration with the Flutter framework. This project demonstrates my skills in mobile app development, state management, and UI design using Flutter, Login Page UI is also included {Internship Project}.",
 
+    github: "https://github.com/HAS0786/ToDo_App",
 
-    github:
-      "https://github.com/HAS0786/ToDo_App",
-
-    tech: [
-      "Flutter",
-      "Dart",
-      "UI Design",
-      "Responsive Layout",
-    ],
+    tech: ["Flutter", "Dart", "UI Design", "Responsive Layout"],
 
     images: [
       "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.37.jpeg",
@@ -362,18 +360,15 @@ const projects = {
       "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
       "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
       "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.40.jpeg",
-     
     ],
   },
-   bmi_calculator: {
+  bmi_calculator: {
     title: "BMI Calculator App",
 
     description:
       "This project is a simple BMI Calculator App developed using Flutter and Dart. It allows users to calculate their Body Mass Index based on their height and weight. The app features a clean and intuitive user interface, responsive layout, and seamless integration with the Flutter framework. This project demonstrates my skills in mobile app development, state management, and UI design using Flutter.",
 
-
-    github:
-      "https://github.com/HAS0786/BMI_Calculator",
+    github: "https://github.com/HAS0786/BMI_Calculator",
 
     tech: [
       "Flutter",
@@ -382,11 +377,10 @@ const projects = {
       "Google Translation API",
       "Responsive Layout",
     ],
-    
+
     images: [
       "images/Fluter Projects/BMI_calculator/WhatsApp Image 2026-07-06 at 06.19.36.jpeg",
       "images/Fluter Projects/BMI_calculator/WhatsApp Image 2026-07-06 at 06.19.36 (1).jpeg",
-        
     ],
   },
 };
@@ -523,27 +517,52 @@ window.addEventListener("scroll", () => {
 const viewer = document.getElementById("imageViewer");
 const viewerImage = document.getElementById("viewerImage");
 const closeViewer = document.querySelector(".close-viewer");
-
 if (viewer && viewerImage && closeViewer) {
   document.addEventListener("click", (e) => {
     if (e.target.matches(".modal-gallery img")) {
+      currentIndex = Number(e.target.dataset.index);
+
+      viewerImage.src = currentImages[currentIndex];
+
       viewer.style.display = "flex";
 
-      viewerImage.src = e.target.src;
+      if (currentImages.length <= 1) {
+        document.querySelector(".prev-btn").style.display = "none";
+        document.querySelector(".next-btn").style.display = "none";
+      } else {
+        document.querySelector(".prev-btn").style.display = "flex";
+        document.querySelector(".next-btn").style.display = "flex";
+      }
     }
   });
 
-  closeViewer.addEventListener("click", () => {
+  closeViewer.onclick = () => {
     viewer.style.display = "none";
-  });
+  };
 
-  viewer.addEventListener("click", (e) => {
+  viewer.onclick = (e) => {
     if (e.target === viewer) {
       viewer.style.display = "none";
     }
-  });
+  };
 }
 
+document.querySelectorAll(".project-card > img").forEach((img) => {
+  img.style.cursor = "zoom-in";
+
+  img.addEventListener("click", () => {
+    currentImages = [img.src];
+
+    currentIndex = 0;
+
+    viewerImage.src = img.src;
+
+    document.querySelector(".prev-btn").style.display = "none";
+    document.querySelector(".next-btn").style.display = "none";
+
+    viewer.style.display = "flex";
+  });
+});
 
 // EMAILJS CONTACT FORM
 
