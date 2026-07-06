@@ -356,12 +356,12 @@ const projects = {
     ],
 
     images: [
-      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.37.jpeg",
-      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.39.jpeg",
-      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40 (2).jpeg",
-      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
-      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
-      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40.jpeg",
+      "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.37.jpeg",
+      "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.39.jpeg",
+      "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.40 (2).jpeg",
+      "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
+      "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
+      "images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.40.jpeg",
      
     ],
   },
@@ -384,8 +384,8 @@ const projects = {
     ],
     
     images: [
-      "images/Fluter Projects/BMI_Calculator/WhatsApp Image 2026-07-06 at 06.19.36.jpeg",
-      "images/Fluter Projects/BMI_Calculator/WhatsApp Image 2026-07-06 at 06.19.36 (1).jpeg",
+      "images/Fluter Projects/BMI_calculator/WhatsApp Image 2026-07-06 at 06.19.36.jpeg",
+      "images/Fluter Projects/BMI_calculator/WhatsApp Image 2026-07-06 at 06.19.36 (1).jpeg",
         
     ],
   },
