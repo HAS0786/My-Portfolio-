@@ -281,6 +281,114 @@ const projects = {
       "images/python projects/project 2/Learning Curve SVM.png",
     ],
   },
+
+  // Flutter
+   whatsapp_clone: {
+    title: "WhatsApp UI Clone",
+
+    description:
+      "This project is a WhatsApp UI clone developed using Flutter and Dart. It replicates the user interface of the popular messaging app, providing a seamless and responsive experience across different devices. The project showcases my skills in Flutter development, UI design, and responsive layout implementation. It includes features such as chat screens, contact lists, and navigation between different sections of the app. This project demonstrates my ability to create visually appealing and functional mobile applications using Flutter.",
+
+
+    github:
+      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+
+    tech: [
+      "Flutter",
+      "Dart",
+      "UI Design",
+      "Responsive Layout",
+    ],
+
+    images: [
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.43.37.jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.41 (1).jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.41 (2).jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.41.jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.42 (1).jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.42 (2).jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.42 (3).jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.43.jpeg",
+      "images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.19.42.jpeg",
+    ],
+  },
+   translator_app: {
+    title: "Urdu Translator App",
+
+    description:
+      "This project is a simple Urdu Translator App developed using Flutter and Dart. It allows users to upload files in English and translates them into Urdu using the Google Translation API. The app features a user-friendly interface, responsive layout, and seamless integration with the translation service. This project demonstrates my skills in mobile app development, API integration, and UI design using Flutter.",
+
+
+    github:
+      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+
+    tech: [
+      "Flutter",
+      "Dart",
+      "UI Design",
+      "Google Translation API",
+      "Responsive Layout",
+    ],
+
+    images: [
+      "images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.34.jpeg",
+      "images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.35 (1).jpeg",
+      "images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.35.jpeg",
+
+     
+    ],
+  },
+   todo: {
+    title: "ToDo App",
+
+    description:
+      "This project is a simple ToDo apps (2 UI) developed using Flutter and Dart. It allows users to create, update, and delete tasks. The app features a clean and intuitive user interface, responsive layout, and seamless integration with the Flutter framework. This project demonstrates my skills in mobile app development, state management, and UI design using Flutter, Login Page UI is also included {Internship Project}.",
+
+
+    github:
+      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+
+    tech: [
+      "Flutter",
+      "Dart",
+      "UI Design",
+      "Responsive Layout",
+    ],
+
+    images: [
+      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.37.jpeg",
+      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.39.jpeg",
+      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40 (2).jpeg",
+      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
+      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40 (1).jpeg",
+      "images/Fluter Projects/ToDo_App/WhatsApp Image 2026-07-06 at 06.19.40.jpeg",
+     
+    ],
+  },
+   bmi_calculator: {
+    title: "BMI Calculator App",
+
+    description:
+      "This project is a simple BMI Calculator App developed using Flutter and Dart. It allows users to calculate their Body Mass Index based on their height and weight. The app features a clean and intuitive user interface, responsive layout, and seamless integration with the Flutter framework. This project demonstrates my skills in mobile app development, state management, and UI design using Flutter.",
+
+
+    github:
+      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+
+    tech: [
+      "Flutter",
+      "Dart",
+      "UI Design",
+      "Google Translation API",
+      "Responsive Layout",
+    ],
+    
+    images: [
+      "images/Fluter Projects/BMI_Calculator/WhatsApp Image 2026-07-06 at 06.19.36.jpeg",
+      "images/Fluter Projects/BMI_Calculator/WhatsApp Image 2026-07-06 at 06.19.36 (1).jpeg",
+        
+    ],
+  },
 };
 
 const modal = document.getElementById("projectModal");
