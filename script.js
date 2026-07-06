@@ -291,7 +291,7 @@ const projects = {
 
 
     github:
-      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+      "https://github.com/HAS0786/WhatsApp_UI_Clone",
 
     tech: [
       "Flutter",
@@ -320,7 +320,7 @@ const projects = {
 
 
     github:
-      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+      "https://github.com/HAS0786/my_translator_app",
 
     tech: [
       "Flutter",
@@ -346,7 +346,7 @@ const projects = {
 
 
     github:
-      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+      "https://github.com/HAS0786/ToDo_App",
 
     tech: [
       "Flutter",
@@ -373,7 +373,7 @@ const projects = {
 
 
     github:
-      "https://github.com/HAS0786/DataScience_SVM_DecisionTree_Scikit_Project",
+      "https://github.com/HAS0786/BMI_Calculator",
 
     tech: [
       "Flutter",
