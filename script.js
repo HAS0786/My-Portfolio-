@@ -120,7 +120,7 @@ const projects = {
     title: "AI-Based LMS",
 
     description:
-      "Final Year Project developed using Flutter, Firebase and AI-powered Retrieval-Augmented Generation (RAG).",
+      "AI based RAG-powered Learning Management System. Student can access Study materials anytime, anywhere. Teacher can upload Notes and Quizzes for Students.Quizzes are of 2 types. Manual and AI Generated. Admin can manage users and content. AI chatbot gives responses from the knowledge base, stored in Database, also answer from Files attach by user or open from User. App have built-in PDF-reader also have offline reading option by downloading the files.",
 
     github: "https://github.com/HAS0786/fyp_notes_house",
 
@@ -138,7 +138,7 @@ const projects = {
       "images/Project1(FYP)/admin side analysis.jpeg",
     ],
   },
-
+ 
   excel_python_bootcamp: {
     title: "Excel and Python Bootcamp Project",
 
@@ -299,6 +299,27 @@ const projects = {
   },
 
   // Flutter
+
+   periodly: {
+    title: "Periodly",
+
+    description:
+      "Periodly is a comprehensive period tracking app developed using Flutter and Firebase. It allows users to track their menstrual cycles, ovulation, and fertility, providing personalized insights and reminders. The app features a user-friendly interface, secure authentication, and cloud-based data storage. This project demonstrates my skills in mobile app development, UI/UX design, and backend integration using Flutter and Firebase.",
+
+    github: "https://github.com/HAS0786/",
+
+    tech: ["Flutter", "Supabase", "AI", "Authentication"],
+
+    images: [
+      "images/Fluter Projects/periodly/SplashScreen.jpeg",
+      "images/Fluter Projects/periodly/Calendar.jpeg",
+      "images/Fluter Projects/periodly/Insights.jpeg",
+      "images/Fluter Projects/periodly/Profile.jpeg",
+      "images/Fluter Projects/periodly/Settings.jpeg",
+      "images/Fluter Projects/periodly/AI Assistant.jpeg",
+    ],
+  },
+
   whatsapp_clone: {
     title: "WhatsApp UI Clone",
 
@@ -602,3 +623,38 @@ contactForm.addEventListener("submit", function (e) {
       statusMessage.style.color = "#ef4444";
     });
 });
+
+// CV DROPDOWN — accessible, closes on outside click and Escape
+(() => {
+  const dropdown = document.getElementById("cvDropdown");
+  const toggle = document.getElementById("cvDropdownToggle");
+  const menu = document.getElementById("cvDropdownMenu");
+  if (!dropdown || !toggle || !menu) return;
+
+  const closeMenu = () => {
+    menu.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const willOpen = menu.hidden;
+    menu.hidden = !willOpen;
+    toggle.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  menu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!dropdown.contains(event.target)) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !menu.hidden) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+})();

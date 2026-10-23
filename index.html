@@ -37,6 +37,8 @@
 
           <li><a href="#skills">Skills</a></li>
 
+          <li><a href="#experience">Experience</a></li>
+
           <li><a href="#projects">Projects</a></li>
 
           <li><a href="#certificates">Certificates</a></li>
@@ -54,7 +56,7 @@
   <section class="hero">
     <div class="container hero-content reveal">
       <div class="hero-left">
-        <span class="hero-tag"> Aspiring Data Analyst </span>
+        <span class="hero-tag"> Information Technology Graduate | Software Development, Data Analytics & AI </span>
 
         <h1>Python, Data Analytics & Flutter Development</h1>
 
@@ -63,16 +65,32 @@
         </h3>
 
         <p>
-          IT student building skills in Excel, Power BI, SQL, Python, Flutter,
-          and AI-powered applications.
+          An Information Technology graduate with practical experience in software development, data analytics, and
+          AI-powered applications. Skilled in Python, SQL, Excel, Power BI, and Flutter, with hands-on experience in
+          data analysis, visualization, and cross-platform mobile development. Interested in building practical
+          technology solutions, exploring intelligent systems, and pursuing opportunities for professional growth and
+          advanced academic study.
         </p>
 
         <div class="hero-buttons">
           <a href="#projects" class="btn primary-btn"> View Projects </a>
 
-          <a href="Resume/Hasnat Ahmad Resume.pdf" class="btn secondary-btn" target="_blank">
-            Download CV
-          </a>
+          <div class="cv-dropdown" id="cvDropdown">
+            <button type="button" class="btn secondary-btn cv-dropdown-toggle" id="cvDropdownToggle"
+              aria-expanded="false" aria-controls="cvDropdownMenu">
+              Download CV <span class="cv-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="cv-dropdown-menu" id="cvDropdownMenu" hidden>
+              <a href="Resume/Hasnat Ahmad Resume.pdf" download>
+                <span class="cv-option-title">Work CV</span>
+                <span class="cv-option-description">Universal CV for job applications</span>
+              </a>
+              <a href="Resume/Hasnat Ahmad Academic CV.pdf" download>
+                <span class="cv-option-title">Academic CV</span>
+                <span class="cv-option-description">For professors and scholarship applications</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -85,12 +103,17 @@
         <div class="hero-card">
           <div class="hero-item">
             <h4>Current Focus</h4>
-            <p>Data Analytics & BI</p>
+            <p><strong>Data Analytics:</strong> SQL, Python, Excel & Power BI</p>
+            <p><strong>Mobile Development:</strong> Flutter, Firebase & Supabase, Riverpod</p>
+            <p><strong>AI & Data Science:</strong> Machine Learning, RAG & AI-powered applications</p>
+            <p><strong>Professional Growth:</strong> Practical projects & portfolio development</p>
           </div>
 
           <div class="hero-item">
             <h4>Learning Path</h4>
-            <p>Excel → Power BI → SQL → Data Analytics (Python) </p>
+            <p><strong>Data Analytics:</strong> Excel → Power BI → SQL → Python</p>
+            <p><strong>AI & Data Science:</strong> Data Science → AI/ML → RAG → FAISS</p>
+            <p><strong>Flutter Development:</strong> Flutter → Firebase → Firestore → FCM → Node.js</p>
           </div>
 
           <div class="hero-item">
@@ -119,14 +142,13 @@
 
       <div class="about-box">
         <p>
-          I am an IT student with knowledge of Python, data analysis, and
-          Flutter application development. Currently building skills in Excel,
-          Power BI, and SQL for a career in data analytics and business
-          intelligence. Familiar with Python libraries including Pandas,
-          NumPy, Matplotlib, and Scikit-learn through academic learning and
-          practice projects. Also working on Flutter-based Final Year Project
-          development with Firebase integration and AI-based features
-          including Retrieval-Augmented Generation (RAG).
+          I am an Information Technology graduate focused on Data Analytics and
+          Python, with practical experience building analytics projects using Excel,
+          Power BI, Pandas, NumPy, and data visualization. I also have Flutter
+          development experience through internships and mobile application projects,
+          including an AI-enabled Learning Management System using Firebase and
+          Retrieval-Augmented Generation (RAG). I enjoy solving practical problems
+          through data, software development, and continuous learning.
         </p>
       </div>
     </div>
@@ -233,7 +255,7 @@
         </div>
 
         <div class="card">
-          <h3>Python</h3>
+          <h3>AI/ML (Data Science)</h3>
 
           <div class="tags">
             <span>Python</span>
@@ -241,6 +263,8 @@
             <span>NumPy</span>
             <span>Matplotlib</span>
             <span>Scikit-learn</span>
+            <span>FAISS</span>
+            <span>RAG</span>
           </div>
         </div>
 
@@ -259,6 +283,47 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <div class="experience-heading">
+            <div>
+              <h3>Flutter Development Intern</h3>
+              <p class="experience-company">CoreLine Logics</p>
+            </div>
+            <span class="experience-date">Aug 2026 – Present</span>
+          </div>
+          <ul>
+            <li>Contributing to Periodly, a cross-platform period-tracking application built with Flutter.</li>
+            <li>Implementing features using Riverpod for state management and Supabase for authentication and database
+              integration.</li>
+            <li>Collaborating through Git, pull requests, code reviews, and a team development workflow.</li>
+          </ul>
+          <div class="tags experience-tags">
+            <span>Flutter</span><span>Riverpod</span><span>Supabase</span><span>Git</span>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-heading">
+            <div>
+              <h3>Flutter Development Intern</h3>
+              <p class="experience-company">DevelopersHub Corporation</p>
+            </div>
+            <span class="experience-date">Dec 2025 – Jan 2026</span>
+          </div>
+          <ul>
+            <li>Completed a six-week internship focused on Flutter and Dart development.</li>
+            <li>Built task-based applications and completed assigned mobile-development tasks.</li>
+          </ul>
+          <div class="tags experience-tags"><span>Flutter</span><span>Dart</span><span>Mobile UI</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
 
   <section id="projects" class="reveal">
@@ -266,7 +331,7 @@
       <h2 class="section-title">Data Analysis Projects</h2>
 
       <div class="projects-grid">
-               <!-- Excel and Python Bootcamp -->
+        <!-- Excel and Python Bootcamp -->
         <div class="project-card">
           <img src="images/bootcamp_Excel_to_Python/Maindashboard.png" alt="project" class="preview-image" />
 
@@ -284,8 +349,7 @@
 
               </button>
 
-              <a href="https://github.com/HAS0786/Excel_to_Python_Bootcamp"
-                target="_blank" class="btn secondary-btn">
+              <a href="https://github.com/HAS0786/Excel_to_Python_Bootcamp" target="_blank" class="btn secondary-btn">
                 GitHub
               </a>
             </div>
@@ -293,7 +357,7 @@
         </div>
         <!-- Excel 1 -->
         <div class="project-card">
-          <img src="images/Excel Projects/dashboard.png" alt="project" class="preview-image"/>
+          <img src="images/Excel Projects/dashboard.png" alt="project" class="preview-image" />
 
           <div class="project-content">
             <h3>Interactive Sales Executive Performance Dashboard</h3>
@@ -318,7 +382,8 @@
         </div>
         <!-- PowerBi 1 -->
         <div class="project-card">
-          <img src="images/Power BI Projects/Project 1 ScreenShots/Dashboard_main.png" alt="project" class="preview-image"/>
+          <img src="images/Power BI Projects/Project 1 ScreenShots/Dashboard_main.png" alt="project"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>E-Commerce Sales Dashboard Power-BI</h3>
@@ -344,7 +409,7 @@
 
         <!-- PowerBi 2 -->
         <div class="project-card">
-          <img src="images/Power BI Projects/Project2 screenshots/Dashboard.png" alt="project" class="preview-image"/>
+          <img src="images/Power BI Projects/Project2 screenshots/Dashboard.png" alt="project" class="preview-image" />
 
           <div class="project-content">
             <h3>HR-Analytics Employee Attrition Dashboard</h3>
@@ -370,7 +435,7 @@
 
         <!-- Pandas 1 -->
         <div class="project-card">
-          <img src="images/python projects/project 1/rfm_segments.png" alt="project" class="preview-image"/>
+          <img src="images/python projects/project 1/rfm_segments.png" alt="project" class="preview-image" />
 
           <div class="project-content">
             <h3>E-Commerce Data Analysis with Python</h3>
@@ -395,7 +460,7 @@
 
         <!-- Python Scikit-Learn -->
         <div class="project-card">
-          <img src="images/python projects/project 2/SVM.png" alt="project" class="preview-image"/>
+          <img src="images/python projects/project 2/SVM.png" alt="project" class="preview-image" />
 
           <div class="project-content">
             <h3>SVM DecisionTree Scikit_Project</h3>
@@ -430,13 +495,17 @@
       <div class="projects-grid">
         <!-- fyp -->
         <div class="project-card">
-          <img src="images/Project1(FYP)/Splash Screen.jpeg" alt="project" class="preview-image"/>
+          <img src="images/Project1(FYP)/Splash Screen.jpeg" alt="project" class="preview-image" />
 
           <!-- fyp -->
           <div class="project-content">
             <h3>AI-Based LMS (FYP)</h3>
 
-            <p>Flutter + Firebase project with AI-powered RAG features.</p>
+            <p>AI based RAG-powered Learning Management System. Student can access Study materials anytime, anywhere.
+              Teacher can upload Notes and Quizzes for Students.Quizzes are of 2 types. Manual and AI Generated. Admin
+              can manage users and content. AI chatbot gives responses from the knowledge base, stored in Database, also
+              answer from Files attach by user or open from User. App have built-in PDF-reader also have offline reading
+              option by downloading the files.</p>
 
             <div class="project-buttons">
               <button class="open-modal" data-project="lms">
@@ -451,15 +520,41 @@
             </div>
           </div>
         </div>
+        <!-- Periodly -->
+        <div class="project-card">
+          <img src="images\Fluter Projects\periodly\SplashScreen.jpeg" alt="project" class="preview-image" />
+
+          <!-- periodly -->
+          <div class="project-content">
+            <h3>Periodly</h3>
+
+            <p>Periodly is a comprehensive period tracking app developed using Flutter and Firebase. It allows users to
+              track their menstrual cycles, ovulation, and fertility, providing personalized insights and reminders.</p>
+
+            <div class="project-buttons">
+              <button class="open-modal" data-project="periodly">
+
+                View Details
+
+              </button>
+
+              <a href="https://github.com/HAS0786/" target="_blank" class="btn secondary-btn">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- WhatsApp Clone -->
         <div class="project-card">
-          <img src="images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.43.37.jpeg" alt="project" class="preview-image"/>
+          <img src="images/Fluter Projects/WhatsApp_clone/WhatsApp Image 2026-07-06 at 06.43.37.jpeg" alt="project"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>WhatsApp UI Clone </h3>
 
             <p>
-              This project is a WhatsApp UI clone developed using Flutter and Dart. It includes features such as chat screens, contact lists, and navigation between different sections of the app.
+              This project is a WhatsApp UI clone developed using Flutter and Dart. It includes features such as chat
+              screens, contact lists, and navigation between different sections of the app.
             </p>
 
             <div class="project-buttons">
@@ -469,8 +564,7 @@
 
               </button>
 
-              <a href="https://github.com/HAS0786/WhatsApp_UI_Clone"
-                target="_blank" class="btn secondary-btn">
+              <a href="https://github.com/HAS0786/WhatsApp_UI_Clone" target="_blank" class="btn secondary-btn">
                 GitHub
               </a>
             </div>
@@ -479,12 +573,14 @@
 
         <!-- Urdu Translator App -->
         <div class="project-card">
-          <img src="images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.34.jpeg" alt="project" class="preview-image"/>
+          <img src="images/Fluter Projects/Translator_App/WhatsApp Image 2026-07-06 at 06.19.34.jpeg" alt="project"
+            class="preview-image" />
           <div class="project-content">
             <h3>Urdu Translator App</h3>
 
             <p>
-              This project is a simple Urdu Translator App developed using Flutter and Dart. It allows users to Upload Files in English and translates it into Urdu using Google translation offline .
+              This project is a simple Urdu Translator App developed using Flutter and Dart. It allows users to Upload
+              Files in English and translates it into Urdu using Google translation offline .
             </p>
 
             <div class="project-buttons">
@@ -494,8 +590,7 @@
 
               </button>
 
-              <a href="https://github.com/HAS0786/my_translator_app"
-                target="_blank" class="btn secondary-btn">
+              <a href="https://github.com/HAS0786/my_translator_app" target="_blank" class="btn secondary-btn">
                 GitHub
               </a>
             </div>
@@ -503,13 +598,17 @@
         </div>
         <!-- ToDo App -->
         <div class="project-card">
-          <img src="images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.37.jpeg" alt="project" class="preview-image"/>
+          <img src="images/Fluter Projects/Todo_app/WhatsApp Image 2026-07-06 at 06.19.37.jpeg" alt="project"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>ToDo App</h3>
 
             <p>
-              This project is a simple ToDo app developed using Flutter and Dart. It allows users to create, update, and delete tasks, as well as mark them as complete. The app features a clean and intuitive user interface, responsive layout, and seamless integration with the Flutter framework. This project demonstrates my skills in mobile app development, state management, and UI design using Flutter.
+              This project is a simple ToDo app developed using Flutter and Dart. It allows users to create, update, and
+              delete tasks, as well as mark them as complete. The app features a clean and intuitive user interface,
+              responsive layout, and seamless integration with the Flutter framework. This project demonstrates my
+              skills in mobile app development, state management, and UI design using Flutter.
             </p>
 
             <div class="project-buttons">
@@ -519,8 +618,7 @@
 
               </button>
 
-              <a href="https://github.com/HAS0786/ToDo_App" target="_blank"
-                class="btn secondary-btn">
+              <a href="https://github.com/HAS0786/ToDo_App" target="_blank" class="btn secondary-btn">
                 GitHub
               </a>
             </div>
@@ -529,13 +627,17 @@
 
         <!-- BMI Calculator App -->
         <div class="project-card">
-          <img src="images/Fluter Projects/BMI_calculator/WhatsApp Image 2026-07-06 at 06.19.36.jpeg" alt="project" class="preview-image" />
+          <img src="images/Fluter Projects/BMI_calculator/WhatsApp Image 2026-07-06 at 06.19.36.jpeg" alt="project"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>BMI Calculator App</h3>
 
             <p>
-              This project is a simple BMI Calculator App developed using Flutter and Dart. It allows users to calculate their Body Mass Index based on their height and weight. The app features a clean and intuitive user interface, responsive layout, and seamless integration with the Flutter framework. This project demonstrates my skills in mobile app development, state management, and UI design using Flutter.
+              This project is a simple BMI Calculator App developed using Flutter and Dart. It allows users to calculate
+              their Body Mass Index based on their height and weight. The app features a clean and intuitive user
+              interface, responsive layout, and seamless integration with the Flutter framework. This project
+              demonstrates my skills in mobile app development, state management, and UI design using Flutter.
             </p>
 
             <div class="project-buttons">
@@ -545,8 +647,7 @@
 
               </button>
 
-              <a href="https://github.com/HAS0786/BMI_Calculator" target="_blank"
-                class="btn secondary-btn">
+              <a href="https://github.com/HAS0786/BMI_Calculator" target="_blank" class="btn secondary-btn">
                 GitHub
               </a>
             </div>
@@ -568,13 +669,15 @@
         <!-- CERTIFICATE 1 Excel-->
 
         <div class="project-card">
-          <img src="images/certificates_images/Excel.png" alt="Excel Certificate" class="preview-image"/>
+          <img src="images/certificates_images/Excel.png" alt="Excel Certificate" class="preview-image" />
 
           <div class="project-content">
             <h3>Microsoft Excel Certificate</h3>
 
             <p>
-              Microsoft Excel certificate validates proficiency in spreadsheet management, data analysis, and visualization using Excel, covering functions, formulas, pivot tables, and charting for effective data-driven decision-making.
+              Microsoft Excel certificate validates proficiency in spreadsheet management, data analysis, and
+              visualization using Excel, covering functions, formulas, pivot tables, and charting for effective
+              data-driven decision-making.
             </p>
 
             <a href="https://www.coursera.org/account/accomplishments/verify/JOT4FANJ6I6V" target="_blank"
@@ -588,13 +691,14 @@
         <!-- CERTIFICATE Power BI -->
 
         <div class="project-card">
-          <img src="images/certificates_images/PowerBI.png" alt="Power BI Certificate" class="preview-image"/>
+          <img src="images/certificates_images/PowerBI.png" alt="Power BI Certificate" class="preview-image" />
 
           <div class="project-content">
             <h3>Microsoft Power BI Certificate</h3>
 
             <p>
-             Microsoft Power BI certificate validates skills in data visualization, dashboard creation, and business intelligence using Power BI, covering data modeling, DAX, and report development for actionable insights.
+              Microsoft Power BI certificate validates skills in data visualization, dashboard creation, and business
+              intelligence using Power BI, covering data modeling, DAX, and report development for actionable insights.
             </p>
 
             <a href="https://www.coursera.org/account/accomplishments/professional-cert/0HL80T4E15OK" target="_blank"
@@ -606,13 +710,16 @@
         <!-- CERTIFICATE Data Analysis with Python -->
 
         <div class="project-card">
-          <img src="images/certificates_images/Data Analysis with Python.png" alt="Power BI Certificate" class="preview-image"/>
+          <img src="images/certificates_images/Data Analysis with Python.png" alt="Power BI Certificate"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>IBM Data Analysis with Python</h3>
 
             <p>
-              IBM Data Analysis with Python certificate validates skills in data analysis using Python, covering libraries like Pandas, NumPy, Matplotlib, and Scikit-learn for data manipulation, visualization, and machine learning applications.
+              IBM Data Analysis with Python certificate validates skills in data analysis using Python, covering
+              libraries like Pandas, NumPy, Matplotlib, and Scikit-learn for data manipulation, visualization, and
+              machine learning applications.
             </p>
 
             <a href="https://www.coursera.org/account/accomplishments/verify/4ITYI0BIMQ6A" target="_blank"
@@ -624,13 +731,14 @@
         <!-- CERTIFICATE Database SQL -->
 
         <div class="project-card">
-          <img src="images/certificates_images/Database_Sql.png" alt="Power BI Certificate" class="preview-image"/>
+          <img src="images/certificates_images/Database_Sql.png" alt="Power BI Certificate" class="preview-image" />
 
           <div class="project-content">
             <h3>IBM Database SQL for Data Science</h3>
 
             <p>
-              IBM Database SQL for Data Science certificate validates foundational knowledge and skills in SQL, database design, querying techniques, and data manipulation for data science applications.
+              IBM Database SQL for Data Science certificate validates foundational knowledge and skills in SQL, database
+              design, querying techniques, and data manipulation for data science applications.
             </p>
 
             <a href="https://www.coursera.org/account/accomplishments/verify/272YFW4AQNGW" target="_blank"
@@ -643,13 +751,15 @@
         <!-- CERTIFICATE - IBM DS -->
 
         <div class="project-card">
-          <img src="images/certificates_images/DataScience.png" alt="IBM Certificate" class="preview-image"/>
+          <img src="images/certificates_images/DataScience.png" alt="IBM Certificate" class="preview-image" />
 
           <div class="project-content">
             <h3>IBM Data Science Certificate</h3>
 
             <p>
-              IBM Data Science certificate validates comprehensive knowledge and skills in data science, covering data analysis, visualization, machine learning, and AI using Python and relevant libraries for real-world applications.
+              IBM Data Science certificate validates comprehensive knowledge and skills in data science, covering data
+              analysis, visualization, machine learning, and AI using Python and relevant libraries for real-world
+              applications.
             </p>
 
             <a href="https://www.coursera.org/account/accomplishments/professional-cert/9LAZA2A9G0QO" target="_blank"
@@ -659,20 +769,22 @@
           </div>
         </div>
 
-         <!-- NAVTTC Digital Forensics -->
+        <!-- NAVTTC Digital Forensics -->
         <div class="project-card">
-          <img src="images/certificates_images/Navvtac Certificate.png" alt="NAVTTC Certificate" class="preview-image" />
+          <img src="images/certificates_images/Navvtac Certificate.png" alt="NAVTTC Certificate"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>NAVTTC Digital Forensics</h3>
 
             <p>
-              The NAVTTC (National Vacational & Technical Training Commistion) Digital Forensics certification validates foundational knowledge and skills in digital forensics, covering topics such as evidence collection, analysis techniques, and legal considerations. 
-              Copy and Enter  "<u>3410168972377</u>" in the verification code field to verify the certificate."
+              The NAVTTC (National Vacational & Technical Training Commistion) Digital Forensics certification validates
+              foundational knowledge and skills in digital forensics, covering topics such as evidence collection,
+              analysis techniques, and legal considerations.
+              Copy and Enter "<u>3410168972377</u>" in the verification code field to verify the certificate."
             </p>
 
-            <a href="https://nsis.navttc.gov.pk/verify-certificate" target="_blank"
-              class="btn primary-btn">
+            <a href="https://nsis.navttc.gov.pk/verify-certificate" target="_blank" class="btn primary-btn">
               Verify Certificate
             </a>
           </div>
@@ -685,7 +797,10 @@
             <h3>CCST Cybersecurity</h3>
 
             <p>
-              The CCST (Cisco Certified Support Technician) Cybersecurity certification validates the essential knowledge and skills necessary to demonstrate work-ready cybersecurity skills.It covers topics such as network security, threat detection, incident response, and basic cybersecurity principles, equipping candidates with the skills needed to support cybersecurity operations.
+              The CCST (Cisco Certified Support Technician) Cybersecurity certification validates the essential
+              knowledge and skills necessary to demonstrate work-ready cybersecurity skills.It covers topics such as
+              network security, threat detection, incident response, and basic cybersecurity principles, equipping
+              candidates with the skills needed to support cybersecurity operations.
             </p>
 
             <a href="https://www.credly.com/badges/6ef6f330-29fe-40dd-a104-ea6deb9a7b3f/public_url" target="_blank"
@@ -694,7 +809,7 @@
             </a>
           </div>
         </div>
-       
+
 
       </div>
     </div>
@@ -709,13 +824,15 @@
         <!-- CERTIFICATE 1 Excel -->
 
         <div class="project-card">
-          <img src="images/certificates_images/Excell Certificate.png" alt="Excel Certificate" class="preview-image"/>
+          <img src="images/certificates_images/Excell Certificate.png" alt="Excel Certificate" class="preview-image" />
 
           <div class="project-content">
             <h3>Excel Certificate (Self-Learning)</h3>
 
             <p>
-              Excel Self-Learning validates proficiency in Microsoft Excel through self-directed learning, demonstrating skills in spreadsheet management, data analysis, and visualization using Excel's functions, formulas, pivot tables, and charting for effective data-driven decision-making.
+              Excel Self-Learning validates proficiency in Microsoft Excel through self-directed learning, demonstrating
+              skills in spreadsheet management, data analysis, and visualization using Excel's functions, formulas,
+              pivot tables, and charting for effective data-driven decision-making.
             </p>
 
             <a href="https://exam.skillcourse.in/student/view_certificate?uid=SC-0132DC3165" target="_blank"
@@ -727,17 +844,19 @@
         <!-- CERTIFICATE Power BI -->
 
         <div class="project-card">
-          <img src="images/certificates_images/GoogleDevCerficate.png" alt="Power BI Certificate" class="preview-image"/>
+          <img src="images/certificates_images/GoogleDevCerficate.png" alt="Power BI Certificate"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>Excel to Python Bootcamp (Google Developer Certificate)</h3>
 
             <p>
-              Excel to Python Bootcamp certificate validates skills in data analysis and visualization using Excel and Python, covering data manipulation, statistical analysis, and graphical representation of data for actionable insights.
+              Excel to Python Bootcamp certificate validates skills in data analysis and visualization using Excel and
+              Python, covering data manipulation, statistical analysis, and graphical representation of data for
+              actionable insights.
             </p>
 
-            <a href="https://www.cert.devtown.in/verify/Z1hAO1X" target="_blank"
-              class="btn primary-btn">
+            <a href="https://www.cert.devtown.in/verify/Z1hAO1X" target="_blank" class="btn primary-btn">
               Verify Certificate
             </a>
           </div>
@@ -745,17 +864,19 @@
         <!-- CERTIFICATE Data Analysis with Python -->
 
         <div class="project-card">
-          <img src="images/certificates_images/Microsoft Student Ambasador.png" alt="Power BI Certificate" class="preview-image"/>
+          <img src="images/certificates_images/Microsoft Student Ambasador.png" alt="Power BI Certificate"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>Excel to Python Bootcamp (Microsoft Student Ambassador)</h3>
 
             <p>
-              Excel to Python Bootcamp certificate validates skills in data analysis and visualization using Excel and Python, covering data manipulation, statistical analysis, and graphical representation of data for actionable insights.
+              Excel to Python Bootcamp certificate validates skills in data analysis and visualization using Excel and
+              Python, covering data manipulation, statistical analysis, and graphical representation of data for
+              actionable insights.
             </p>
 
-            <a href="https://www.cert.devtown.in/verify/ZOqSF6" target="_blank"
-              class="btn primary-btn">
+            <a href="https://www.cert.devtown.in/verify/ZOqSF6" target="_blank" class="btn primary-btn">
               Verify Certificate
             </a>
           </div>
@@ -763,23 +884,25 @@
         <!-- CERTIFICATE Database SQL -->
 
         <div class="project-card">
-          <img src="images/certificates_images/Certifcate of Appreciation.png" alt="Power BI Certificate" class="preview-image"/>
+          <img src="images/certificates_images/Certifcate of Appreciation.png" alt="Power BI Certificate"
+            class="preview-image" />
 
           <div class="project-content">
             <h3>Excel to Python Bootcamp (Certificate of Appreciation)</h3>
 
             <p>
-              Excel to Python Bootcamp certificate validates skills in data analysis and visualization using Excel and Python, covering data manipulation, statistical analysis, and graphical representation of data for actionable insights.
+              Excel to Python Bootcamp certificate validates skills in data analysis and visualization using Excel and
+              Python, covering data manipulation, statistical analysis, and graphical representation of data for
+              actionable insights.
             </p>
 
-            <a href="https://www.cert.devtown.in/verify/qD8Mx" target="_blank"
-              class="btn primary-btn">
+            <a href="https://www.cert.devtown.in/verify/qD8Mx" target="_blank" class="btn primary-btn">
               Verify Certificate
             </a>
           </div>
         </div>
 
-       
+
 
       </div>
     </div>
@@ -794,7 +917,7 @@
         <div class="card">
           <h3>Email</h3>
 
-          <p>hasnatmughal756@gmail.com</p>
+          <p>hasnat.ahmad.9593@gmail.com</p>
         </div>
         <div class="card">
           <h3>Location</h3>
@@ -903,8 +1026,8 @@
 
   <!-- JS -->
 
-<!-- IMAGE VIEWER -->
-<div id="imageViewer" class="image-viewer">
+  <!-- IMAGE VIEWER -->
+  <div id="imageViewer" class="image-viewer">
 
     <span class="close-viewer">&times;</span>
 
@@ -914,12 +1037,12 @@
 
     <button class="viewer-btn next-btn">&#10095;</button>
 
-</div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script src="script.js"></script>
-`
+  <script src="script.js"></script>
+  `
 </body>
 
 </html>
